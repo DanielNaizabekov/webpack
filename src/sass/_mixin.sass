@@ -1,0 +1,25 @@
+=media($size)
+	@media screen and (max-width: $size)
+		@content
+
+
+
+@function rem($px)
+	@return $px / 16px + 0rem
+
+
+
+=font($family, $size: false, $color: false, $weight: false, $lh: false)
+	font-family: $family, sans-serif
+
+	@if $size
+		font-size: $size
+
+	@if $color
+		color: $color
+
+	@if $weight
+		font-weight: $weight
+
+	@if $lh
+		line-height: $lh
